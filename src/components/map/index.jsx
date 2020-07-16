@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 
 import ReactMapGL, {Marker, Popup} from "react-map-gl";
@@ -30,8 +30,17 @@ const Map = () => {
     let propulsionMarkers = useSelector(state => state.marker.propulsionLocation)
     let new_location = useSelector(state => state.settings.new_location)
     let userMarkers = useSelector(state => state.marker.userLocation)
+    let selectedMarker = useSelector(state => state.marker.selectedMarker)
 
-    const whichIconBro = (type) => {
+    useEffect(() => {
+        if(selectedMarker)
+        {
+            setSelectedInfo(selectedMarker)
+            dispatch({type: "RESET_MARKER"})
+        }
+    }, [selectedMarker, dispatch])
+
+    const whichIconBro = type => {
         switch(type)
         {
             case "home":
@@ -92,7 +101,7 @@ const Map = () => {
             return null;
         }
     }
-
+    
     return (
         <>
         <ModalComp modalRef={modalRef} handleLocation={handleLocation}/>

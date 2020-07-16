@@ -3,6 +3,7 @@ import React from 'react';
 import {MainContainer} from './style';
 import Map from './map/index';
 import Nav from './navbar/index';
+import Sidebar from './sidebar/index';
 
 const Test = () => {
 
@@ -10,6 +11,7 @@ const Test = () => {
         <MainContainer>
             <Nav />
             <Map />
+            <Sidebar />
         </MainContainer>
     )
 }

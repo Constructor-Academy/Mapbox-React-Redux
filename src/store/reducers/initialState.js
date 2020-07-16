@@ -87,5 +87,6 @@ export const initialState = {
         },
     ],
     userLocation: [],
+    selectedMarker: null,
     types: ["restaurant", "bar", "place"]
 }

@@ -11,7 +11,7 @@ export const markerReducer = (state=initialState, action) => {
                     {
                         "type": "Feature",
                         "properties": {
-                            "id": state.userLocation.length+1,
+                            "id": "user" + state.userLocation.length+1,
                             "name": action.payload.title,
                             "description": action.payload.content,
                             "type": action.payload.selectedValue,
@@ -26,6 +26,16 @@ export const markerReducer = (state=initialState, action) => {
                         }
                     }
                 ]
+            }
+        case "CHECK_MARKER":
+            return {
+                ...state,
+                selectedMarker: action.payload
+            }
+        case "RESET_MARKER":
+            return {
+                ...state,
+                selectedMarker: null
             }
         default:
             return state;

@@ -19,7 +19,7 @@ export const IconWhite = styled(FontAwesomeIcon)`
     color: white;
     border-radius: 0% 50% 50% 50%;
     border: 2px solid #fff;
-    background: ${(props) => props.type === "propulsion" ? "#EE495C" : "green" };
+    background: ${(props) => props.type === "propulsion" ? "#EE495C" : "#00BBE4" };
 `;
 
 export const Icons = styled(FontAwesomeIcon)`
@@ -27,5 +27,5 @@ export const Icons = styled(FontAwesomeIcon)`
     width: 30px;
     height: 30px;
     opacity: 1;
-    color: ${(props) => props.source === "propulsion" ? "#EE495C" : "green" };
+    color: ${(props) => props.source === "propulsion" ? "#EE495C" : "#00BBE4" };
 `;
