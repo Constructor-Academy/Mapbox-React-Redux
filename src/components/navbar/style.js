@@ -17,7 +17,7 @@ export const Navbar = styled.div`
     to {width: 170px; height: 40px}
   }
 
-  button {
+  #addPlaceBtn {
     background: ${(props) => props.state ? "#fff" : "#EE495C"};
     color: ${(props) => props.state ? "#EE495C" : "#fff"};
     padding: 5px;
@@ -33,4 +33,10 @@ export const Navbar = styled.div`
     animation-iteration-count: infinite;
   }
 
+`;
+
+export const MapSettings = styled.section`
+  > * {
+    margin-right: 5px;
+  }
 `;

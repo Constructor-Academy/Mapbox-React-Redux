@@ -31,6 +31,7 @@ const Map = () => {
     let new_location = useSelector(state => state.settings.new_location)
     let userMarkers = useSelector(state => state.marker.userLocation)
     let selectedMarker = useSelector(state => state.marker.selectedMarker)
+    let map_style = useSelector(state => state.settings.map_style)
 
     useEffect(() => {
         if(selectedMarker)
@@ -116,9 +117,7 @@ const Map = () => {
             /*
                 CHANGE THE STYLE OF THE MAP
             */
-            mapStyle="mapbox://styles/mapbox/streets-v11"
-            // mapStyle="mapbox://styles/guir/ckcfwddbi0idl1jo5ojkdh77v"
-            // mapStyle="mapbox://styles/guir/ckcfwdxzn0jus1ipfqre7cz02"
+            mapStyle={map_style}
 
             doubleClickZoom={true}
             style={{
