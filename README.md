@@ -3,6 +3,7 @@
 # MapBox & React-Redux  
 
 ![](mapbox_react_propulsion.gif)
+
 With [MapBox](https://www.mapbox.com/), React-Redux and Styled Components.
 
 ## Purpose
