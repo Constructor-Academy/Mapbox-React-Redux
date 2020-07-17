@@ -4,6 +4,8 @@
 
 ![](mapbox_react_propulsion.gif)
 
+<img src="./mapbox_react_propulsion.gif" title="Github Logo" width="100%">
+
 With [MapBox](https://www.mapbox.com/), React-Redux and Styled Components.
 
 ## Purpose
